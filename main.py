@@ -16,11 +16,14 @@ class CameraScreen(Screen):  # This is called boilerplate code. Just copied & pa
         """Starts the camera and changes the Button text"""
         self.ids.camera.play = True
         self.ids.camera.texture = self.ids.camera._camera.texture
+        self.ids.camera.opacity = 1
 
     def stop(self):
         """Stops the camera and changes the button text"""
         self.ids.camera.play = False
         self.ids.camera.texture = None
+        self.ids.camera.opacity = 0
+
 
     def capture(self):
         """Creates a unique file path with the current timestamp in the files dir"""
